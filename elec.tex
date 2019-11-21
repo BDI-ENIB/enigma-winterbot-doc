@@ -13,6 +13,7 @@
 \usepackage{subcaption} %usefull for mutliple figures side by side
 \usepackage{makeidx}
 \usepackage{hyperref} %to add link in the table of contents
+\usepackage{graphicx}
 
 \usepackage{xcolor}
 \hypersetup{
@@ -88,7 +89,27 @@ documentation.\\
 	compliqués chez AODE, en leur fournissant les PCB et les composants à 
 	souder.
 
+\newpage
 \section{Architecture}
+
+\subsection{Architecture de communication}
+	Les communications sont réalisées selon le plan de la figure 1.
+	\begin{figure}[h]
+		\caption{Architecture de communication}
+		\centering
+		\includegraphics[width=1\textwidth]{pictures/arch_data}
+	\end{figure}
+	La communication est organisée selon une topologie en étoile, autour d'un
+	Raspberry Pi 3B, servant de PC principal. Le PC fait tourner une IHM
+	développée en C++, affichée sur l'écran Rasbperry Pi (ici l'écran officiel
+	est utilisé pour des raisons de trésorerie et pour la garantie de se
+	compatibilitée). L'écran est relié via sa nappe directement au PC. Son 
+	alimentation est évoquée dans la section Architecture d'alimentation.
+
+
+
+\subsection{Architecture d'alimentation}
+
 
 \section{Alimentation}
 
